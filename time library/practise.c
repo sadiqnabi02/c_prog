@@ -35,4 +35,17 @@ char s[100];
 strftime(s,100,"%A %B %d",cur_time);
 printf("%s \n",s);
 
+//Learning the clock_t function. Basically it gives us the
+//number of clock ticks of the cpu
+
+clock_t start,end;
+
+start = clock();
+for(int i = 0; i < 10000; i++){//printf("%d\n",i);
+}
+end = clock();
+
+double total = (double) (end-start)/CLOCKS_PER_SEC;
+printf("time: %fs\n",total );
+
 }
