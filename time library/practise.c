@@ -41,7 +41,7 @@ printf("%s \n",s);
 clock_t start,end;
 
 start = clock();
-for(int i = 0; i < 10000; i++){//printf("%d\n",i);
+for(int i = 0; i < 10000; i++){printf("%d\n",i);
 }
 end = clock();
 
