@@ -16,6 +16,6 @@ int main()
         Sleep(1000);
         seconds--;
     }
-    printf("Time's UP!!");
+    printf("Time's UP!!\a");
 
 }
