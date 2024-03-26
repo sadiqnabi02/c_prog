@@ -1,46 +1,53 @@
 #include<stdio.h>
+#include<stdbool.h>
+#include<stdlib.h>
 
 int main()
 {
-    int code,quantity,price,total,totalamount;
-    char another;
-    do {
-    printf("Welcome to Pizzaburger\n\n");
-    printf("   Items:    Prices:\n");
-    printf("1. Burger   450\n");
-    printf("2. Pizza    350\n");
-    printf("3. Cola     20   \n");
-    printf("4. Water    Free\n");
+    int order,price,qty,total,total_amount,another,cash,change;
 
-    printf("Enter Item Code: ");
-    scanf("%d",&code);
-    printf("Enter the quatity: ");
-    scanf("%d",&quantity);
+do{
+    printf("1) Burger----450\n");
+    printf("2) Pizza----500\n");
+    printf("3) Pasta----400\n");
+    printf("4) Drinks----50\n");
 
-    switch(code)
+    printf("Enter your order number: ");
+    scanf("%d",&order);
+
+    switch(order)
     {
-        case 1: price = 450;
+    case 1:
+        price = 450;
         break;
-        case 2: price = 350;
+    case 2:
+        price = 500;
         break;
-        case 3: price = 20;
+    case 3:
+        price = 400;
         break;
-        case 4: price = 0;
+    case 4:
+        price = 50;
         break;
     }
-    total = quantity * price;
+    printf("Enter quantity: ");
+    scanf("%d",&qty);
+    total = qty * price;
     printf("Total: %d \n",total);
 
-    totalamount = total + totalamount;
+    total_amount += total;
 
-    printf("Add another order? Press Y/y");
-     another = getche();
-}
-     while (another == 'y' || 'Y');
+    printf("Add another order: y/n \n");
+    another = getche();
+}while(another == 'Y'|| another == 'y');
 
-      printf("Total Amount is: %d",totalamount);
+printf("Current total is: %d",total_amount);
 
+printf("Cash entered: ");
+scanf("%d",&cash);
 
+change = cash - total;
 
+printf("Change: %d",change);
 
 }
